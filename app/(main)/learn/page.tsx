@@ -15,13 +15,13 @@ const Learn = async () => {
   return (
     <div className="flex gap-[48px] px-6">
       <FeedWrapper>
-        <Header title="Spanish" />
+        <Header title={userProgress.activeCourses.title} />
       </FeedWrapper>
       <StickWrapper>
         <UserProgress
-          activCourse={{ title: "Spanish", imageSrc: "/es.svg" }}
-          hearts={5}
-          points={100}
+          activCourse={userProgress.activeCourses}
+          hearts={userProgress.hearts}
+          points={userProgress.points}
           hasActiveSubscription={false}
         />
       </StickWrapper>
